@@ -5,6 +5,7 @@ import { Dashboard } from './pages/Dashboard';
 import { Analytics } from './pages/Analytics';
 import { DecisionForm } from './components/DecisionForm';
 import { DecisionDetail } from './components/DecisionDetail';
+import { Toaster } from './components/ui/sonner';
 import type { Decision } from './types';
 
 function App() {
@@ -41,6 +42,8 @@ function App() {
         open={selectedDecision !== null}
         onClose={handleCloseDetail}
       />
+
+      <Toaster />
     </DecisionProvider>
   );
 }
