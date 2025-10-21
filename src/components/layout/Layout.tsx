@@ -13,7 +13,7 @@ export function Layout({ children, currentView, onViewChange, onNewDecision }: L
   return (
     <div className="min-h-screen bg-background flex flex-col">
       {/* Header */}
-      <header className="border-b border-border bg-card sticky top-0 z-50">
+      <header className="border-b border-border bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <BookOpen className="h-6 w-6 text-primary" />
@@ -53,7 +53,7 @@ export function Layout({ children, currentView, onViewChange, onNewDecision }: L
       </main>
 
       {/* Mobile Bottom Navigation */}
-      <nav className="md:hidden border-t border-border bg-card fixed bottom-0 left-0 right-0 z-50">
+      <nav className="md:hidden border-t border-border bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80 fixed bottom-0 left-0 right-0 z-50">
         <div className="flex items-center justify-around py-3">
           <Button
             variant={currentView === 'dashboard' ? 'secondary' : 'ghost'}
